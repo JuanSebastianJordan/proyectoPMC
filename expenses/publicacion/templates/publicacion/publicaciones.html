@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'publicacion/base.html' %}
+
+{% block title %}Publicaciones{% endblock %}
+
+{% block content %}
+<h1>Publicaciones</h1>
+<ul>
+    {% for item in pu %}
+        <li>nombre: {{item.nombre}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
