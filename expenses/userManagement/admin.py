@@ -1,5 +1,7 @@
 from django.contrib import admin
-from userManagement.models import XpensesUser
+from userManagement.models import ExpensesUser, Local
 
 # Register your models here.
-admin.site.register(XpensesUser)
+admin.site.register(ExpensesUser)
+admin.site.register(Local)
+

@@ -1,12 +1,12 @@
 {% extends 'base.html' %} {% block content %}
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data" class="form-group" action="">
 	{% csrf_token %}
-	<br />
+
 	{{ form.as_p }}
 	<button
-		type="button"
+		type="submit"
 		class="btn btn-success waves-effect waves-light"
-		onClick=" window.location.href='/usuarios/{{ user.username }}' "
+
 	>
 		Crear
 	</button>

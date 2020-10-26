@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+  <div class="card-header">
+    Mi cuenta
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{lo.nombre}}</h5>
+    <p class="card-text">{{lo.direccion}}</p>
+    <a href="/publicaciones" class="btn btn-primary">Crear publicacion</a>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,10 +1,15 @@
 {% extends 'base.html' %} {% block content %}
-<div class="XpensesUser">
-	<h2>{{ XpensesUser.universidad }}</h2>
-	{% for post in XpensesUser.feed %}
-	<tr class="{% cycle 'row1' 'row2' %}">
-		...
-	</tr>
-	{% endfor %}
+<div class="card">
+  <div class="card-header">
+    Mi cuenta
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{us.username}}</h5>
+    <p class="card-text">{{us.universidad}}</p>
+	  <p class="card-text">Presupuesto: {{us.presupuesto}}</p>
+	  <p class="card-text">Semestre: {{us.semestre}}</p>
+
+    <a href="/transacciones" class="btn btn-primary">ver balance</a>
+  </div>
 </div>
 {% endblock %}
