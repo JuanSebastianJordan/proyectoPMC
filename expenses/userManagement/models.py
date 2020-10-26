@@ -8,7 +8,7 @@ from transaccion.models import Transaccion
 class XpensesUser(AbstractBaseUser):
     username=models.CharField(unique=True,blank=False,max_length=80)
     USERNAME_FIELD = 'username'
-    feed = models.ForeignKey(Transaccion, on_delete=models.CASCADE)
+    feed = models.ForeignKey(Transaccion, on_delete=models.CASCADE,blank=True,null=True)
     presupuesto = models.PositiveIntegerField(editable=True, validators=[MinValueValidator(1)],blank=False)
     universidad = models.CharField(blank=False,max_length=80)
     carrera = models.CharField(blank=False,max_length=120)

@@ -11,7 +11,7 @@ def miCuenta(request, username):
         usuario = get_object_or_404(XpensesUser, username=username)
         return render(request, 'miCuenta.html', {'XpensesUser': usuario})
     else:
-        return render(request,'registrarse.html')
+        return render(request,'./registration/sign_up.html')
     return ()
     
 def sign_up(request):
@@ -23,4 +23,4 @@ def sign_up(request):
             login(request,usuario)
             return render(request,'home')
     context['form']=form
-    return render(request,'registrarse.html',context)
+    return render(request, './registration/sign_up.html', context)

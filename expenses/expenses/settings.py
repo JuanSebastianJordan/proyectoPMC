@@ -26,7 +26,7 @@ SECRET_KEY = '=gbtg4k--&70@v&v%6f&pxnghc$hztk=eqrsdbg-ghdo(tpe1g'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_URL = '/login/'
 
 # Application definition
 
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'expenses.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'expenses', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

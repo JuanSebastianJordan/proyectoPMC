@@ -6,5 +6,6 @@ def get_user(searchusername):
 
 def create_usuario(form):
     usuario = form.save()
+    usuario = XpensesUser.object.createUser
     usuario.save()
     return usuario
