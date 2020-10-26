@@ -14,3 +14,5 @@ def view2(response):
 def home(response):
     return render(response, "publicacion/home.html",{})
 
+def users(response):
+    return render(response,"userManagement/users.html")
