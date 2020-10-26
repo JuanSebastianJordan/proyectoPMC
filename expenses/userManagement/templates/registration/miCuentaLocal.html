@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% for item in lo %}
 <div class="card">
+
   <div class="card-header">
     Mi cuenta
   </div>
+
   <div class="card-body">
-    <h5 class="card-title">{{lo.nombre}}</h5>
-    <p class="card-text">{{lo.direccion}}</p>
+    <h5 class="card-title">{{item.nombre}}</h5>
+    <p class="card-text">{{item.direccion}}</p>
     <a href="/publicaciones" class="btn btn-primary">Crear publicacion</a>
   </div>
-</div>
 
+
+</div>
+{% endfor %}
 {% endblock %}

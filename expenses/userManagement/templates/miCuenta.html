@@ -1,15 +1,18 @@
 {% extends 'base.html' %} {% block content %}
+{% for item in us %}
 <div class="card">
   <div class="card-header">
     Mi cuenta
   </div>
+
   <div class="card-body">
-    <h5 class="card-title">{{us.username}}</h5>
-    <p class="card-text">{{us.universidad}}</p>
-	  <p class="card-text">Presupuesto: {{us.presupuesto}}</p>
-	  <p class="card-text">Semestre: {{us.semestre}}</p>
+    <h5 class="card-title">{{item.username}}</h5>
+    <p class="card-text">{{item.universidad}}</p>
+	  <p class="card-text">Presupuesto: {{item.presupuesto}}</p>
+	  <p class="card-text">Semestre: {{item.semestre}}</p>
 
     <a href="/transacciones" class="btn btn-primary">ver balance</a>
   </div>
 </div>
+{% endfor %}
 {% endblock %}

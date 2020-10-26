@@ -17,11 +17,11 @@ from django.contrib.auth.decorators import login_required
 
 
 def miCuenta(request):
-    us= ExpensesUser.objects.get(id=1)
+    us= ExpensesUser.objects.all()
     return render(request,'miCuenta.html',{"us":us})
 
 def miCuentaLocal(request):
-    lo = Local.objects.get(id=1)
+    lo = Local.objects.all()
     return render(request, 'registration/miCuentaLocal.html',{"lo":lo})
     
 def sign_up(request):
